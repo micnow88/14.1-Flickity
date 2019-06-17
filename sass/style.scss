@@ -1,0 +1,95 @@
+$main-font: 'Open Sans', sans-serif;
+.main-carousel {
+	position: relative;
+	.reset-button {
+		position: absolute;
+		right: 10px;
+  		bottom: 10px;
+  		z-index: 1;
+  		padding: 2px 20px;
+  		font-size: 26px;
+  		font-family: $main-font;
+    	color: #dfdcf7;
+    	border: 2px solid #446fb3;
+    	border-radius: 15px;
+    	background-color: #446fb3;
+    	cursor: pointer;
+    	&:hover {
+			color: #446fb3;
+			background-color: #dfdcf7;
+    	}
+	}
+	.carousel-cell {
+  		width: 100%;
+  		height: 50%;
+  		min-height: 250px; 
+  		margin-right: 10px;
+  		background-size: contain;
+  		background-repeat: no-repeat;
+  		background-position: center;
+  		display: flex;
+  		flex-direction: row;
+  		flex-wrap: nowrap;
+  		justify-content: center;
+  		align-content: center;
+  		align-items: flex-end;
+  		.container {
+  			width: 1200px;
+  			display: flex;
+  			flex-direction: row;
+  			flex-wrap: nowrap;
+  			justify-content: center;
+  			align-content: center;
+  			align-items: center;
+    		h3 {
+    			font-family: $main-font;
+    			color: #dfdcf7;
+    		}
+  		}
+	}
+}
+.progress-bar {
+  height: 10px;
+  width: 0;
+  background: #446fb3;
+}
+
+@media (min-width: 377px) and (max-width: 426px) {
+	.main-carousel {
+		position: relative;
+		.reset-button {
+			position: absolute;
+			padding: 2px 5px;	
+			font-size: 14px;
+			bottom: 10px;
+		}	
+		.carousel-cell {
+  			width: 100%;
+  			height: 50%;
+  			min-height: 150px; 
+		}
+	}
+	.progress-bar {
+  		height: 5px;
+  	}
+}
+
+@media (max-width: 376px) {
+	.main-carousel {
+		position: relative;
+		.reset-button {
+			position: absolute;
+			padding: 2px 5px;	
+			font-size: 14px;
+			bottom: 10px;
+		}	
+		.carousel-cell {
+  			width: 100%;
+  			height: 50%;
+  			min-height: 150px; 
+		}
+	}
+	.progress-bar {
+  		height: 2px;
+  	}
+}
