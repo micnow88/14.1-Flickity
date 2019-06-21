@@ -1,4 +1,18 @@
 'use strict';
+ 
+var templateSlide = document.getElementById('template-slide').innerHTML;
+Mustache.parse(templateSlide);
+
+var listSlide = '';
+
+var resultCell = document.getElementsByClassName('carousel-cell');
+
+for(var i = 0; i < cellData.length; i++) {
+    console.log(cellData);
+    listSlide = Mustache.render(templateSlide, cellData[i]);
+    resultCell[i].insertAdjacentHTML('beforeend', listSlide);
+  }
+
 
 var mainCarousel = document.querySelector('.main-carousel');
 var flkty = new Flickity( mainCarousel, {

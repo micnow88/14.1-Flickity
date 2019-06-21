@@ -1,36 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>14.1-Flickity</title>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-    </head>
-    <body>
-    	<div class="main-carousel">
-    		<button class="reset-button" id="reset-button">Restart</button>
-  			<div class="carousel-cell" style="background-image: url(images/Sandomierz.jpg);" id="carousel-cell1">
-				<div class="container"><h3>Sandomierz</h3></div>
-  			</div>
-  			<div class="carousel-cell" style="background-image: url(images/Solina.jpg);" id="carousel-cell2">
-				<div class="container"><h3>Solina</h3></div>
-  			</div>
-  			<div class="carousel-cell" style="background-image: url(images/Zamość.jpg);" id="carousel-cell3">
-				<div class="container"><h3>Zamość</h3></div>
-  			</div>
-			<div class="carousel-cell" style="background-image: url(images/Mazury.jpg);" id="carousel-cell4">
-				<div class="container"><h3>Mazury</h3></div>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>14.1-Flickity</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="vendor/normalize.css">
+      <link rel="stylesheet" type="text/css" href="vendor/flickity.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    
+     <!--Template slide-->
+    <script id="template-slide" type="x-tmpl-mustache">
+      <div class="container">
+        <h3>{{title}}</h3>
+        {{{description}}}
+      </div>
+    </script>
+
+    <!--Array with cell data-->
+    <script>
+      var cellData = [
+        {
+          title: 'Dzień I',
+          image: 'images/Sandomierz.jpg',
+          description: '<p>Sandomierz</p> <img src="images/Sandomierz.jpg" alt="Sandomierz"> <p>Rynek</p>'
+        },
+        {
+          title: 'Dzień II',
+          image: 'images/Solina.jpg',
+          description: '<p>Solina</p> <img src="images/Solina.jpg" alt="Solina"> <p>Tama</p>'
+        },
+        {
+          title: 'Dzień III',
+          image: 'images/Zamość.jpg',
+          description: '<p>Zamość</p> <img src="images/Zamość.jpg" alt="Zamość"> <p>Ratusz</p>'
+        },
+        {
+          title: 'Dzień IV',
+          image: 'images/Mazury.jpg',
+          description: '<p>Mazury</p> <img src="images/Mazury.jpg" alt="Mazury"> <p>Jezioro Wardęg</p>'
+        },
+        {
+          title: 'Dzień V',
+          image: 'images/Olsztyn.jpg',
+          description: '<p>Olsztyn</p> <img src="images/Olsztyn.jpg" alt="Olsztyn"> <p>Zamek</p>'
+        }
+      ];
+    </script>
+    
+    <!--Carousel-->
+    <div class="main-carousel">
+    	<button class="reset-button" id="reset-button">Restart</button>
+  		<div class="carousel-cell" id="carousel-cell1">
+				
+  		</div>
+  		<div class="carousel-cell" id="carousel-cell2">
+				
+  		</div>
+  		<div class="carousel-cell" id="carousel-cell3">
+				
+  		</div>
+			<div class="carousel-cell" id="carousel-cell4">
+				
 			</div>
-			<div class="carousel-cell" style="background-image: url(images/Olsztyn.jpg);" id="carousel-cell5">
-				<div class="container"><h3>Olsztyn</h3></div>
+			<div class="carousel-cell" id="carousel-cell5">
+				
 			</div>
 		</div>
 		<div class="progress-bar"></div>
+    
+    <!--Scripts-->
     <script  src="vendor/flickity.pkgd.min.js"></script>
     <script  src="vendor/hash.js"></script>
+    <script  src="vendor/mustache.min.js"></script>
     <script  src="js/script.js"></script>	
-    </body>
+  </body>
 </html>
