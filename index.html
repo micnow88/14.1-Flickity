@@ -25,27 +25,32 @@
         {
           title: 'Dzień I',
           image: 'images/Sandomierz.jpg',
-          description: '<p>Sandomierz</p> <img src="images/Sandomierz.jpg" alt="Sandomierz"> <p>Rynek</p>'
+          description: '<p>Sandomierz</p> <img src="images/Sandomierz.jpg" alt="Sandomierz"> <p>Rynek</p>',
+          cords: {lat: 50.678995, lng: 21.749001}
         },
         {
           title: 'Dzień II',
           image: 'images/Solina.jpg',
-          description: '<p>Solina</p> <img src="images/Solina.jpg" alt="Solina"> <p>Tama</p>'
+          description: '<p>Solina</p> <img src="images/Solina.jpg" alt="Solina"> <p>Tama</p>',
+          cords: {lat: 49.395529, lng: 22.453412}
         },
         {
           title: 'Dzień III',
           image: 'images/Zamość.jpg',
-          description: '<p>Zamość</p> <img src="images/Zamość.jpg" alt="Zamość"> <p>Ratusz</p>'
+          description: '<p>Zamość</p> <img src="images/Zamość.jpg" alt="Zamość"> <p>Ratusz</p>',
+          cords: {lat: 50.717063, lng: 23.252525}
         },
         {
           title: 'Dzień IV',
           image: 'images/Mazury.jpg',
-          description: '<p>Mazury</p> <img src="images/Mazury.jpg" alt="Mazury"> <p>Jezioro Wardęg</p>'
+          description: '<p>Mazury</p> <img src="images/Mazury.jpg" alt="Mazury"> <p>Jezioro Wadąg</p>',
+          cords: {lat: 53.850355, lng: 20.564732}
         },
         {
           title: 'Dzień V',
           image: 'images/Olsztyn.jpg',
-          description: '<p>Olsztyn</p> <img src="images/Olsztyn.jpg" alt="Olsztyn"> <p>Zamek</p>'
+          description: '<p>Olsztyn</p> <img src="images/Olsztyn.jpg" alt="Olsztyn"> <p>Zamek</p>',
+          cords: {lat: 50.749516, lng: 19.274141}
         }
       ];
     </script>
@@ -70,11 +75,20 @@
 			</div>
 		</div>
 		<div class="progress-bar"></div>
-    
+    <br>
+    <!-- Maps -->
+    <div class="main-maps">
+      <h3>Google Maps</h3>
+      <div id="map"></div>
+    </div>
+
     <!--Scripts-->
     <script  src="vendor/flickity.pkgd.min.js"></script>
     <script  src="vendor/hash.js"></script>
     <script  src="vendor/mustache.min.js"></script>
     <script  src="js/script.js"></script>	
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Bt2QLT2ZLi9ogKdvLyVOpwKfFa1lkrs&callback=initMap">
+    </script>
   </body>
 </html>

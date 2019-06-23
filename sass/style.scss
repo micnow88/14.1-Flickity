@@ -2,6 +2,7 @@ $main-font: 'Open Sans', sans-serif;
 .main-carousel {
 	position: relative;
   height: 50%;
+  min-height: 250px; 
 	.reset-button {
 		position: absolute;
 		right: 10px;
@@ -21,8 +22,7 @@ $main-font: 'Open Sans', sans-serif;
     }
 	}
 	.carousel-cell {
-  	width: 100%;
-  	min-height: 250px; 
+  	width: 100%; 
   	margin-right: 10px;
   	background-size: contain;
   	background-repeat: no-repeat;
@@ -61,6 +61,7 @@ $main-font: 'Open Sans', sans-serif;
         font-size: 20px;
         order: 1;
         color: #2a1c7f;
+        margin: 5px;
       }
   	}
 	}
@@ -70,6 +71,23 @@ $main-font: 'Open Sans', sans-serif;
   height: 10px;
   width: 0;
   background: #446fb3;
+}
+.main-maps {
+  height: 50%;
+  min-height: 250px;
+  max-width: 400px; 
+  margin: 0 auto;
+  h3 {
+    text-align: center;
+    font-size: 20px;
+    font-family: $main-font;
+    color: #2a1c7f;
+    margin: 5px; 
+  }
+  #map {
+    height: 300px;
+    width: 100%;
+  }
 }
 
 /* MEDIA QUERRY */
