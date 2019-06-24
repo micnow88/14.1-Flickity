@@ -8,7 +8,7 @@ Mustache.parse(templateSlide);
 var listSlide = '';
 
 var resultCell = document.getElementsByClassName('carousel-cell');
-
+console.log(resultCell);
 for(var i = 0; i < cellData.length; i++) {
   listSlide = Mustache.render(templateSlide, cellData[i]);
   resultCell[i].insertAdjacentHTML('beforeend', listSlide);
@@ -23,8 +23,7 @@ var flkty = new Flickity( mainCarousel, {
   adaptiveHeight: true,
   pageDots: false,
   hash: true,
-  cellSelector: '.carousel-cell',
-  initialIndex: 1
+  cellSelector: '.carousel-cell'
 });
 
 var flkty = new Flickity( '.main-carousel', {
@@ -34,7 +33,7 @@ var flkty = new Flickity( '.main-carousel', {
 //Reset button
 var buttonReset = document.getElementById('reset-button');
 var initialIndex = document.getElementById('carousel-cell1');
-
+console.log(initialIndex);
 buttonReset.addEventListener( 'click', function( event ) {
   flkty.selectCell(initialIndex);
 });
@@ -64,11 +63,24 @@ window.initMap = function() {
   });
 
   //Pętla dla markerów dla slajdów
+
   for (var i=0; i < cellData.length; i++) {
     var markerData = cellData[i].cords;
     var markerCell = new google.maps.Marker({
       position: markerData,
-      map: map
-  });
+      map: map,
+      index: i
+    });
+    console.log(markerData);
+    console.log(markerCell);
+    markerCell.addListener( 'click', function() {
+      flkty.selectCell(this.index);
+    });
   }
+  flkty.on( 'change', function(index) {
+    map.panTo(cellData[index].cords);
+    map.setZoom(10);
+  });
 }
+
+
